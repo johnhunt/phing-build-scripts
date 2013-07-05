@@ -64,7 +64,7 @@ class DeployLogTask extends Task {
 
     public function setEmail($email) 
     {
-        $email = filter_var($this->email, FILTER_VALIDATE_EMAIL);
+        $email = filter_var($email, FILTER_VALIDATE_EMAIL);
         if ($email === false) {
             throw new BuildException('You must pass a valid email address in the email attribute');
         }
